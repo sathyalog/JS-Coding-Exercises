@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <title>Reverse a String</title>
+  </head>
+  <body>
+        <div class="container-fluid">
+            <div class="row" style="width:1448px;margin:0 auto">
+                <div class="alert alert-primary col-md-12" role="alert">
+                        Reverse a String
+                    </div>
+                    <div>
+                        <blockquote class="blockquote">
+                            <p class="mb-0"> Reversing a String can be achieved in multiple ways.</p>
+                        </blockquote>
+                        <p class="lead">
+                            <code>
+                                    1. Using reverse() 
+                            </code>   
+                                    <span> - First convert string to array and apply reverse() to it and later convert array into string and display.</span>
+                                    
+                        </p>
+                    <br/>                                          
+              <pre>
+                const name='sathya';
+                const reverse1 = (str) => {
+                    return str.split('').reverse().join('');
+                };
+                const reverseName = reverse1(name);
+              </pre>
+              
+                    <p class="lead">
+                        <code>
+                                2. without reverse() 
+                        </code>  - Use for(for-of) loop and iterate each character and assign it to a string and return the same
+                    </p>
+              <pre>
+                const reverse2 = (str) => {
+                    let reversed = '';
+                    for(char of str) {
+                        reversed = char + reversed;
+                    }
+                    return reversed
+                }
+                
+                const reverseName2 = reverse2(name);
+              </pre>
+                <p class="lead">
+                        <code>
+                                3. using reduce() - reduce(initialValue, currentValue) 
+                        </code>  - Use reduce method to reverse the string.
+                    </p>
+                <pre>
+                const reverse3 = (str) => {
+                    return str.split('').reduce((reversed,character)=> {
+                        return character + reversed
+                    })
+                }
+                
+                const reverseName3 = reverse3(name);
+                </pre>   
+            <b>Difference between for-of and for-in:</b>
+            Both for..of and for..in statements iterate over lists; the values iterated on are different though, for..in returns a list of keys on the object being iterated, whereas for..of returns a list of values of the numeric properties of the object being iterated.
+            <pre>Eg:
+        let list = [4, 5, 6];
+    
+        for (let i in list) {
+        console.log(i); // "0", "1", "2",
+        }
+
+        for (let i of list) {
+        console.log(i); // "4", "5", "6"
+        }
+            </pre>
+      </div>
+      <button class="btn btn-dark"><a
+        href="http://localhost:1234/"
+        style="text-decoration: none;color:white">Back</a></button>
+      </div>
+      
+    <script src="index.js"></script>
+  </body>
+</html>
