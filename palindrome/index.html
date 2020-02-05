@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <title>Palindrome</title>
+  </head>
+  <body>
+        <div class="container-fluid">
+            <div class="row" style="width:1448px;margin:0 auto">
+                <div class="alert alert-primary col-md-12" role="alert">
+                        Palindrome
+                    </div>
+                    <div>
+                        <blockquote class="blockquote">
+                            <p class="mb-0"> Palindromes are strings that form the same word if it is reversed. Eg: madam <-> madam, level -> level</p>
+                        </blockquote>
+                        <p class="lead">
+                            <code>
+                                    1. Using reverse() 
+                            </code>   
+                                    <span> - First convert string to array and apply reverse() to it and later compare input string with reversed string.</span>
+                                    
+                        </p>
+                    <br/>                                          
+              <pre>
+                const palindrome = (str) => {
+                    return str === str.split('').reverse().join('') ? true : false
+                }
+                
+                const test1 = palindrome('level');
+                console.log(test1); // true
+                const test2 = palindrome('god');
+                console.log(test2); //false
+              </pre>
+              
+                    <p class="lead">
+                        <code>
+                                2. with every()
+                        </code>  - The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+                    </p>
+              <pre>
+                const palindrome1 = (str) => {
+                  return str.split('').every((char, i) => {
+                      return char === str[str.length - i - 1]
+                  })
+              }
+              
+              const test4 = palindrome1('level');
+              </pre>
+                 
+      </div>
+      <button class="btn btn-dark"><a
+        href="/"
+        style="text-decoration: none;color:white">Back</a></button>
+      </div>
+      
+    <script src="index.js"></script>
+  </body>
+</html>

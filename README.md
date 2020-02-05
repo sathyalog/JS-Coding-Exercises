@@ -13,3 +13,4 @@ ___
 ### List of Concepts
 
 1. Reverse String
+2. Palindrome - Palindromes are strings that form the same word if it is reversed. Eg: madam <-> madam, level -> level
