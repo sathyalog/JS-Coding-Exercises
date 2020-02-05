@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <title>Remove Duplicates from Array</title>
+  </head>
+  <body>
+        <div class="container-fluid">
+            <div class="row" style="width:1448px;margin:0 auto">
+                <div class="alert alert-primary col-md-12" role="alert">
+                    Remove Duplicates from Array
+                    </div>
+                    <div>
+                        <blockquote class="blockquote">
+                            <p class="mb-0"> Remove Duplicates from Array using sets, filters & reduce.</p>
+                        </blockquote>
+                        <p class="lead">
+                            <code>
+                                    Sets & Filter - ES6
+                            </code>   
+                                    
+                                    
+                        </p>
+                    <br/>                                          
+              <pre>
+                const arrayval = [1,5,6,3,5,7,6,1,3,2,9];
+
+                const filtered = arrayval.filter((val,i) => i === arrayval.indexOf(val));
+
+                console.log(filtered)
+
+                const filtered1 = [...new Set(arrayval)];
+
+                console.log(filtered1);
+              </pre>
+              <p class="lead">
+                <code>
+                        Using ES5
+                </code>     
+            </p>
+            <pre>
+                function removeDups(arrayval) {
+                    let unique = {};
+                    arrayval.forEach(function(i) {
+                      if(!unique[i]) {
+                        unique[i] = true;
+                      }
+                    });
+                    return Object.keys(unique);
+                }
+                  
+                const filtered2 = removeDups(arrayval);
+            </pre>
+           </div>      
+      </div>
+      <button class="btn btn-dark"><a
+        href="/"
+        style="text-decoration: none;color:white">Back</a></button>
+      </div>
+      
+    <script src="index.js"></script>
+  </body>
+</html>
