@@ -18,3 +18,4 @@ ___
 4. closures
 5. cloning an array
 6. reverse an integer
+7. Fibonacci Series
