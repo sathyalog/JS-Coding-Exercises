@@ -40,6 +40,25 @@
                 const add10 = new Adder(10);
                 console.log(add10(3)); //13
               </pre>
+              <span>
+                Realtime use case: Closures are very useful when you have some private information which should not be accessible to global scope. A normal function which is a closure can only call the private function and can access the data of it. By this your private function information is not accessible for rest of the functions/global functions.
+              </span><br/><br/>
+              <pre>
+                function main() {
+                    var privatefunction = function () {
+                        console.log('hello');
+                    }
+                
+                    return {
+                        publicfunction : function () {
+                            privatefunction();
+                        }
+                    }
+                }
+                
+                const myFunc = new main;
+                myFunc.publicfunction();//hello
+              </pre>
            </div>
            <button class="btn btn-dark"><a
             href="/"

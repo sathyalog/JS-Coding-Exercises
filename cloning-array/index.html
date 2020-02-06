@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <title>Cloning an Array</title>
+  </head>
+  <body>
+        <div class="container-fluid">
+            <div class="row" style="width:1448px;margin:0 auto">
+                <div class="alert alert-primary col-md-12" role="alert">
+                    Cloning an Array
+                    </div>
+                    <div>
+                        <blockquote class="blockquote">
+                            <p class="mb-0"> Cloning an Array can be achieved in multiple ways like shown below</p>
+                        </blockquote>
+                        <p class="lead">
+                            <code>
+                                    Clone array using ES6
+                            </code>   
+                        </p>
+                    <br/>                                          
+              <pre>
+                const arr = [2,3,6,4,8,1];
+
+                //ES6
+                const array1 = [...arr];
+                console.log(array1);//[2,3,6,4,8,1]
+              </pre>
+              <p class="lead">
+                <code>
+                        Using ES5
+                </code>        
+            </p>
+            <pre>
+                const cloneArray = (arr) => {
+                const newArray = [];
+                for(let i =0; i < arr.length;i++) {
+                    newArray.push(arr[i]);
+                }
+                return newArray;
+                }
+
+                const array2 = cloneArray(arr);
+                console.log(array2);//[2,3,6,4,8,1]
+            </pre>
+            <p class="lead">
+                <code>
+                        Using Slice
+                </code>        
+            </p>
+            <pre>
+                const array3 = arr.slice(0);
+                console.log(array3);
+            </pre>
+           </div>
+           
+      </div>
+      <button class="btn btn-dark"><a
+        href="/"
+        style="text-decoration: none;color:white">Back</a></button>    
+      </div>
+    <script src="index.js"></script>
+  </body>
+</html>
