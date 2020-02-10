@@ -19,3 +19,4 @@ ___
 5. cloning an array
 6. reverse an integer
 7. Fibonacci Series
+8. Find top 2 scorers from the list of employees array holding 5 employee objects

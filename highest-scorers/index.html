@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <title>Top 2 highest scorers from employees</title>
+  </head>
+  <body>
+        <div class="container-fluid">
+            <div class="row" style="width:1448px;margin:0 auto">
+                <div class="alert alert-primary col-md-12" role="alert">
+                    Top 2 highest scorers from employees
+                    </div>
+                    <div>
+                        <blockquote class="blockquote">
+                            <p class="mb-0"> Find top 2 scorers from the list of employees array holding 5 employee objects</p>
+                        </blockquote>
+                        <p class="lead">
+                            <code>
+                                    1. Using es6 and vanilla JS
+                            </code>   
+                                    
+                        </p>
+                    <br/>                                          
+              <pre>
+                //Find top 2 scores from the employees object
+                const emp1 = {name:'sathya',score:85}
+                const emp2 = {name:'vakacharla',score:80}
+                const emp3 = {name:'narahari',score:81}
+                const emp4 = {name:'sudheer',score:66}
+                const emp5 = {name:'pradeep',score:97}
+
+                const employees = [emp1,emp2,emp3,emp4,emp5]
+
+                //using es6 for only highest scorer
+                let highestN = Math.max(...employees.map(emp => emp.score))
+
+
+
+                //find highest and second highest using javascript
+                function highest(employees) {
+                let temp = [], desc = [];
+                for(let i=0;i< employees.length;i++) {
+                    temp[i] = employees[i].score
+                }
+                temp.sort() //sorting asc
+                desc = temp.reverse(); //making desc
+                return {highest: Math.max(...temp), secondHighest: desc[1]};
+                }
+
+                highest(employees) //{ highest: 97, secondHighest: 85 }
+              </pre>      
+      </div>  
+      </div>
+      <button class="btn btn-dark"><a
+        href="/"
+        style="text-decoration: none;color:white">Back</a></button>
+    <script src="index.js"></script>
+  </body>
+</html>
